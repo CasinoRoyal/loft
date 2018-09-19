@@ -13,13 +13,14 @@ var server = require("browser-sync").create();
 var run = require("run-sequence");
 var svgstore = require("gulp-svgstore");
 var del = require("del");
+var pug = require("gulp-pug");
 /*var uglify = require("gulp-uglify");
 var svgmin = require("gulp-svgmin");
 var path = require("path");
 var htmlmin = require("gulp-htmlmin");*/
 
-gulp.task('style', function(){
-	gulp.src('app/sass/**/*.scss')
+gulp.task("style", function(){
+	gulp.src("app/sass/**/*.scss")
 		.pipe(plumber())
 		.pipe(sass())
 		.pipe(postcss([
@@ -32,8 +33,18 @@ gulp.task('style', function(){
       sourceMap: true,
       debug: true
 		}))
-		.pipe(rename('style.min.css'))
-		.pipe(gulp.dest('dist/css'))
+		.pipe(rename("style.min.css"))
+		.pipe(gulp.dest("dist/css"))
+});
+
+gulp.task("pug", function(){
+  gulp.src("app/source/pages/**/*.pug")
+    .pipe(plumber())
+    .pipe(pug({
+      pretty: true,
+    }))
+    .pipe(server.stream())
+    .pipe(gulp.dest("dist"));
 });
 
 gulp.task("html", function () {
@@ -81,7 +92,7 @@ gulp.task("serve", function() {
   });
 
   gulp.watch("app/sass/**/*.scss", ["style"]);
-  gulp.watch("app/*.html", ["html"]);
+  gulp.watch("app/source/**/*.pug", ["pug"]);
   gulp.watch("app/js/**/*.js", ["js"]);
 });
 

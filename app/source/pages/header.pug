@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(http-equiv="X-UA-Compatible", content="ie=edge")
+  title Loft
+body
+  header.section.header
+    ul.social.header__social
+      each item in ['vk', 'gh', 'in']
+        li.social__item
+          a(href="" class = `social__link.social__link--${item}`)
+
+    a.hamburger(href="")
+    
+    .title-bg
+      img.title-bg__img(src="", alt="")
+    
+    .user-box
+      img.user-box__img(src="", alt="")
+      .user-box__name Volodimyr Klitchko
+      .user-box__decs Web-developer
+    a.down-arrow
+  
+  main.main
+
+    section.section.about
+      
+      .about__info
+        svg.triangle
+        h2.title.title-big Обо мне
+        img.about__img
+        h3.title.title-small Кто я
+        p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+
+      .about__practice
+        svg.triangle
+        h2.title.title-small Чем я могу быть вам полезен
+        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non repellendus aliquam suscipit rem eos asperiores quisquam temporibus facere a, iste soluta laudantium impedit, deleniti at quae nam quo facilis doloribus.
+        .skills
+          ul.skills__list
+            li.skills__section Frontend
+              ul.skill__tr
+                li.skill__item Html 5
+                li.skill__item Html 5
+                li.skill__item Html 5
+            li.skills__section Backend
+              ul.skill__tr
+                li.skill__item Html 5
+                li.skill__item Html 5
+                li.skill__item Html 5
+            li.skills__section Workflow
+              ul.skill__tr
+                li.skill__item Html 5
+                li.skill__item Html 5
+                li.skill__item Html 5
+
+
+
+
