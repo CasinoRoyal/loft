@@ -10,6 +10,7 @@ var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var server = require("browser-sync").create();
+var reload = server.reload;
 var run = require("run-sequence");
 var svgstore = require("gulp-svgstore");
 var del = require("del");
@@ -27,14 +28,14 @@ gulp.task("style", function(){
 			autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })
 		]))
 		.pipe(gulp.dest('dist/css'))
-    .pipe(server.stream())
+    .pipe(reload({stream : true}))
 		.pipe(minify({
 			restructure: false,
       sourceMap: true,
       debug: true
 		}))
 		.pipe(rename("style.min.css"))
-		.pipe(gulp.dest("dist/css"))
+		.pipe(gulp.dest("dist/css"));
 });
 
 gulp.task("pug", function(){
@@ -98,7 +99,7 @@ gulp.task("serve", function() {
 
 gulp.task("copy", function() {
   return gulp.src([
-    "app/fonts/**/*.{woff,woff2}",
+    "app/font/**/*.{woff,woff2,ttf}",
     "app/img/**/*.{jpg,png,svg,webp,mp4,webm}",
     "app/js/**/*.js"
   ], {
@@ -117,7 +118,7 @@ gulp.task("build", function (done) {
       "copy",
       "style",
       "sprite",
-      "html",
+      "pug",
       done
   );
 });
