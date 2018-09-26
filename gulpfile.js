@@ -15,6 +15,7 @@ var run = require("run-sequence");
 var svgstore = require("gulp-svgstore");
 var del = require("del");
 var pug = require("gulp-pug");
+var cheerio = require('gulp-cheerio');
 /*var uglify = require("gulp-uglify");
 var svgmin = require("gulp-svgmin");
 var path = require("path");
@@ -74,7 +75,14 @@ gulp.task("webp", function() {
 });
 
 gulp.task("sprite", function () {
-  return gulp.src("app/img/{icon-*,logo-*}.svg")
+  return gulp
+    .src("app/img/{icon-*,logo-*}.svg")
+    .pipe(cheerio({
+      run: function($) {
+        $("[fill]").removeAttr("fill");
+      },
+      parserOptions: { xmlMode: true }
+    }))
     .pipe(svgstore({
       inlineSvg: true
     }))

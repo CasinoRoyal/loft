@@ -30,6 +30,19 @@ img {
 .u-margin-bottom-xs {
   margin-bottom: 10px; }
 
+.u-margin-bottom-s {
+  margin-bottom: 30px; }
+
+.u-margin-bottom-md {
+  margin-bottom: 50px; }
+
+@font-face {
+  font-family: Webissimo;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/sansus-webissimo-regular-webfont.woff2") format("woff2");
+  src: local("Webissimo Regular"), local("Webissimo-Regular"), url("../font/sansus-webissimo-regular-webfont.woff") format("woff"); }
+
 @font-face {
   font-family: Roboto;
   font-style: italic;
@@ -76,16 +89,19 @@ img {
 
 .social__link {
   display: block;
-  width: 30px;
-  height: 30px;
-  background-position: 50% 50%;
+  /*   width: 30px;
+height: 30px; */
+  background-position: center;
   background-repeat: no-repeat; }
-  .social__link--vk {
-    background-image: url(../img/vk.svg); }
-  .social__link--gh {
-    background-image: url(../img/gh.svg); }
-  .social__link--in {
-    background-image: url(../img/in.svg); }
+
+.social__icon {
+  display: inline-block;
+  width: 30px;
+  height: 25px;
+  fill: white;
+  vertical-align: bottom; }
+  .social__icon:hover {
+    fill: #ebefe2; }
 
 .hamburger {
   position: absolute;
@@ -123,6 +139,8 @@ img {
 .title {
   position: relative;
   padding: 25px 0;
+  font-family: Webissimo;
+  font-weight: 400;
   text-align: center;
   text-transform: uppercase;
   background-position: 50% 35%;
@@ -132,8 +150,6 @@ img {
     font-size: 63px;
     color: #373e42; }
   .title--small {
-    max-width: 400px;
-    margin: 0 auto;
     font-size: 35px;
     color: #566358; }
   .title:before {
@@ -206,7 +222,32 @@ img {
           transform: translate(-50%, -50%);
   width: 380px;
   padding: 0 40px 30px;
-  background-color: rgba(244, 245, 240, 0.85); }
+  background-color: rgba(244, 245, 240, 0.85);
+  -webkit-border-radius: 5px;
+          border-radius: 5px; }
+
+.contact__item:not(:last-child) {
+  margin-bottom: 25px; }
+
+.contact__link {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 40px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #566358; }
+
+.contact__icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  fill: #6c9c5a;
+  width: 25px;
+  height: 25px; }
 
 .nav {
   width: 350px; }
@@ -224,6 +265,51 @@ img {
   text-decoration: none;
   color: #fff; }
 
+.skills__section:not(:last-child) {
+  margin-bottom: 20px; }
+
+.skills__title {
+  font-size: 28px;
+  font-weight: 500; }
+
+.skill__item {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 120px; }
+  .skill__item:not(:last-child) {
+    margin-right: 20px; }
+
+.skill__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  color: #4e8839; }
+
+.skill__item:hover .circle-above {
+  stroke-dasharray: 25.1 282.6; }
+
+.circles {
+  fill: none;
+  stroke-width: 20; }
+
+.circle-under {
+  stroke: #dfdcd5; }
+
+.circle-above {
+  stroke: rgba(108, 156, 90, 0.9);
+  stroke-dasharray: 0.001 282.6;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s; }
+
 .header {
   position: relative;
   background-image: url(../../img/header-bg.jpg), -webkit-gradient(linear, left bottom, left top, from(#e2ebd0), to(#4e8839));
@@ -234,6 +320,9 @@ img {
   -webkit-box-shadow: inset 0 170px 230px -180px rgba(0, 0, 0, 0.8);
           box-shadow: inset 0 170px 230px -180px rgba(0, 0, 0, 0.8);
   height: 600px; }
+
+.social__item:hover .social__icon {
+  fill: #4e8839; }
 
 .about {
   position: relative;
@@ -258,8 +347,7 @@ img {
   bottom: 100%; }
 
 .about__wrapper-left {
-  padding-left: 10px;
-  padding-bottom: 25px; }
+  padding-left: 10px; }
 
 .about__wrapper-right {
   padding-right: 10px; }
@@ -280,13 +368,19 @@ img {
   .about__text p:not(:last-child) {
     margin-bottom: 15px; }
 
+.about__skills {
+  padding: 0 40px 50px; }
+
 .map {
   position: relative;
   height: 900px;
-  z-index: -1;
-  background-image: url(../img/map.jpg); }
+  background-image: url(../img/map.jpg);
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-repeat: no-repeat; }
 
 .footer {
+  position: relative;
   margin-top: -160px; }
 
 .footer__top {

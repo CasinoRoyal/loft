@@ -13,6 +13,8 @@ body
         each item in ['vk', 'gh', 'in']
           li.social__item
             a(href="" class = `social__link social__link--${item}`)
+              svg.social__icon
+                use(xlink:href=`img/sprite.svg#icon-${item}`)
 
       a.hamburger(href="")
       
@@ -54,38 +56,87 @@ body
           polygon(points="1000,0 1000,100 0,100")
         .about__wrapper-right
           h2.title.title--small.title-practice Чем я могу быть вам полезен
-          .about__text.about__text--align-small
+          .about__text.about__text--align-small.u-margin-bottom-md
             p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non repellendus aliquam suscipit rem eos asperiores quisquam temporibus facere a, iste soluta laudantium impedit, deleniti at quae nam quo facilis doloribus.
-          .skills
-            ul.skills__list
-              li.skills__section Frontend
+          .about__skills
+            ul.skills
+              li.skills__section
+                .skills__title Frontend
                 ul.skill__tr
-                  li.skill__item Html 5
-                  li.skill__item Html 5
-                  li.skill__item Html 5
-              li.skills__section Backend
+                  li.skill__item 
+                    span.skill__text Html 5
+                    svg(class="circles" width="120" height="120" viewbox="0 0 110 110")
+                      circle(r="45" cx="50%" cy="50%" class="circle-under")
+                      circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle-above")
+                  li.skill__item 
+                    span.skill__text Html 5
+                    svg(class="circles" width="120" height="120" viewbox="0 0 110 110")
+                      circle(r="45" cx="50%" cy="50%" class="circle-under")
+                      circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle-above")
+                  li.skill__item 
+                    span.skill__text JavaScript & jquery
+                    svg(class="circles" width="120" height="120" viewbox="0 0 110 110")
+                      circle(r="45" cx="50%" cy="50%" class="circle-under")
+                      circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle-above")
+              li.skills__section
+                .skills__title Backend
                 ul.skill__tr
-                  li.skill__item Html 5
-                  li.skill__item Html 5
-                  li.skill__item Html 5
-              li.skills__section Workflow
+                  ul.skill__tr
+                  li.skill__item 
+                    span.skill__text Html 5
+                    svg(class="circles" width="120" height="120" viewbox="0 0 110 110")
+                      circle(r="45" cx="50%" cy="50%" class="circle-under")
+                      circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle-above")
+                  li.skill__item 
+                    span.skill__text Html 5
+                    svg(class="circles" width="120" height="120" viewbox="0 0 110 110")
+                      circle(r="45" cx="50%" cy="50%" class="circle-under")
+                      circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle-above")
+                  li.skill__item 
+                    span.skill__text Html 5
+                    svg(class="circles" width="120" height="120" viewbox="0 0 110 110")
+                      circle(r="45" cx="50%" cy="50%" class="circle-under")
+                      circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle-above")
+              li.skills__section
+                .skills__title Workflow
                 ul.skill__tr
-                  li.skill__item Html 5
-                  li.skill__item Html 5
-                  li.skill__item Html 5
+                  ul.skill__tr
+                  li.skill__item 
+                    span.skill__text Html 5
+                    svg(class="circles" width="120" height="120" viewbox="0 0 110 110")
+                      circle(r="45" cx="50%" cy="50%" class="circle-under")
+                      circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle-above")
+                  li.skill__item 
+                    span.skill__text Html 5
+                    svg(class="circles" width="120" height="120" viewbox="0 0 110 110")
+                      circle(r="45" cx="50%" cy="50%" class="circle-under")
+                      circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle-above")
+                  li.skill__item 
+                    span.skill__text Html 5
+                    svg(class="circles" width="120" height="120" viewbox="0 0 110 110")
+                      circle(r="45" cx="50%" cy="50%" class="circle-under")
+                      circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle-above")
 
     .section.map
       .contact
-        h3.title.title--small Контакты
+        h3.title.title--small.u-margin-bottom-s Контакты
         ul.contact__list
           li.contact__item
-            a.contact__link(href="") Skype
+            a.contact__link.contact__link--skype(href="") mr_mishkin
+              svg.contact__icon
+                use(xlink:href="img/sprite.svg#icon-skype")
           li.contact__item
-            a.contact__link(href="") Mail
+            a.contact__link.contact__link--mail(href="") Mr_mishkin@gmail.com
+              svg.contact__icon
+                use(xlink:href="img/sprite.svg#icon-mail")
           li.contact__item
-            a.contact__link(href="") Phone
+            a.contact__link.contact__link--phone(href="") 900-884-25-36
+              svg.contact__icon
+                use(xlink:href="img/sprite.svg#icon-phone")
           li.contact__item
-            a.contact__link(href="") Address
+            a.contact__link.contact__link--address(href="") Мишкино, ул. Мишечной революции, д.14
+              svg.contact__icon
+                use(xlink:href="img/sprite.svg#icon-map")
 
   footer.section.footer
     .footer__top
@@ -107,6 +158,8 @@ body
            each item in ['vk', 'gh', 'in']
             li.social__item
              a(href="" class = `social__link social__link--${item}`)
+              svg.social__icon
+                use(xlink:href=`img/sprite.svg#icon-${item}`)
         .footer__quote
           p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
           span — Martin Golding
