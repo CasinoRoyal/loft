@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <link href="css/style.css" rel="stylesheet"/>
+  <title>Login</title>
+</head>
+<body>
+  <div class="wrapper-login">
+    <section class="authorization">
+      <h2 class="title title--small title--white u-margin-bottom-s">Авторизуйтесь</h2>
+      <form class="form">
+        <div class="form__group">
+          <input class="form__input" type="text" placeholder="Логин" required=""/>
+          <svg class="form__input-icon">
+            <use xlink:href="img/sprite.svg#icon-login"></use>
+          </svg>
+        </div>
+        <div class="form__group">
+          <input class="form__input" type="password" placeholder="Пароль" required=""/>
+          <svg class="form__input-icon">
+            <use xlink:href="img/sprite.svg#icon-password"></use>
+          </svg>
+        </div>
+        <div class="form__group">
+          <input class="form__checkbox" id="human" type="checkbox"/>
+          <label class="form__checkbox-label" for="human">Я человек</label>
+        </div>
+        <div class="form__group">
+          <p>Вы точно не робот?</p>
+          <input class="form__radio" id="positive" type="radio"/>
+          <label class="form__radio-label" for="positive">Да</label>
+          <input class="form__radio" id="negative" type="radio"/>
+          <label class="form__radio-label" for="negative">Не уверен</label>
+        </div>
+        <div class="form__group">
+          <button class="form__btn" type="submit">На главную</button>
+          <button class="form__btn" type="submit">Войти</button>
+        </div>
+      </form>
+    </section>
+    <div class="copyright">
+      <p>© Владимир Астахов | Создано с любовью в LoftSchool | 2016</p>
+    </div>
+  </div>
+</body>

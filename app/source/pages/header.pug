@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
 head
   meta(charset="UTF-8")
   meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -9,9 +9,9 @@ head
 body
   header.section.header
     .wrapper
-      ul.social.header__social
+      ul.social
         each item in ['vk', 'gh', 'in']
-          li.social__item
+          li.social__item.social__item--fill-green
             a(href="" class = `social__link social__link--${item}`)
               svg.social__icon
                 use(xlink:href=`img/sprite.svg#icon-${item}`)
@@ -42,8 +42,8 @@ body
           h2.title.title--big.title-about Обо мне
           .about__img
             img(src="http://place-hold.it/445x390", alt="")
-          h3.title.title--small Кто я
-          .about__text.about__text--align-big
+          h3.title.title--small.title--green Кто я
+          .about__text.about__text--align-big.u-margin-bottom-s
             p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
             p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
 
@@ -55,7 +55,7 @@ body
           class="triangle triangle--fill-white triangle-about")
           polygon(points="1000,0 1000,100 0,100")
         .about__wrapper-right
-          h2.title.title--small.title-practice Чем я могу быть вам полезен
+          h2.title.title--small.title--green.title-practice Чем я могу быть вам полезен
           .about__text.about__text--align-small.u-margin-bottom-md
             p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non repellendus aliquam suscipit rem eos asperiores quisquam temporibus facere a, iste soluta laudantium impedit, deleniti at quae nam quo facilis doloribus.
           .about__skills
@@ -119,7 +119,7 @@ body
 
     .section.map
       .contact
-        h3.title.title--small.u-margin-bottom-s Контакты
+        h3.title.title--small.title--green.u-margin-bottom-s Контакты
         ul.contact__list
           li.contact__item
             a.contact__link.contact__link--skype(href="") mr_mishkin
@@ -156,7 +156,7 @@ body
           
           ul.social
            each item in ['vk', 'gh', 'in']
-            li.social__item
+            li.social__item.social__item--opacity
              a(href="" class = `social__link social__link--${item}`)
               svg.social__icon
                 use(xlink:href=`img/sprite.svg#icon-${item}`)
@@ -164,5 +164,5 @@ body
           p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
           span — Martin Golding
     .footer__bottom
-      .footer__copyright
+      .copyright
         p © Владимир Астахов | Создано с любовью в LoftSchool | 2016
