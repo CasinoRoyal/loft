@@ -13,31 +13,35 @@
       <h2 class="title title--small title--white u-margin-bottom-s">Авторизуйтесь</h2>
       <form class="form">
         <div class="form__group">
-          <input class="form__input" type="text" placeholder="Логин" required=""/>
-          <svg class="form__input-icon">
-            <use xlink:href="img/sprite.svg#icon-login"></use>
-          </svg>
+          <input class="form__input" id="login" type="text" placeholder="Логин" required=""/>
+          <label class="form__input-label" for="login">
+            <svg class="form__input-icon">
+              <use xlink:href="img/sprite.svg#icon-login"></use>
+            </svg>
+          </label>
         </div>
         <div class="form__group">
-          <input class="form__input" type="password" placeholder="Пароль" required=""/>
-          <svg class="form__input-icon">
-            <use xlink:href="img/sprite.svg#icon-password"></use>
-          </svg>
+          <input class="form__input" id="pass" type="password" placeholder="Пароль" required=""/>
+          <label class="form__input-label" for="pass">
+            <svg class="form__input-icon">
+              <use xlink:href="img/sprite.svg#icon-password"></use>
+            </svg>
+          </label>
         </div>
         <div class="form__group">
           <input class="form__checkbox" id="human" type="checkbox"/>
           <label class="form__checkbox-label" for="human">Я человек</label>
         </div>
-        <div class="form__group">
-          <p>Вы точно не робот?</p>
-          <input class="form__radio" id="positive" type="radio"/>
+        <div class="form__group u-margin-bottom-md">
+          <p class="form__radio-text">Вы точно не робот?</p>
+          <input class="form__radio" id="positive" type="radio" name="captha"/>
           <label class="form__radio-label" for="positive">Да</label>
-          <input class="form__radio" id="negative" type="radio"/>
+          <input class="form__radio" id="negative" type="radio" name="captha"/>
           <label class="form__radio-label" for="negative">Не уверен</label>
         </div>
-        <div class="form__group">
-          <button class="form__btn" type="submit">На главную</button>
-          <button class="form__btn" type="submit">Войти</button>
+        <div class="form__group-btn">
+          <button class="form__btn form__btn--bd-right" type="submit">На главную</button>
+          <button class="form__btn form__btn--bd-left" type="submit">Войти</button>
         </div>
       </form>
     </section>

@@ -15,7 +15,8 @@ var run = require("run-sequence");
 var svgstore = require("gulp-svgstore");
 var del = require("del");
 var pug = require("gulp-pug");
-var cheerio = require('gulp-cheerio');
+var cheerio = require("gulp-cheerio");
+var spriteSmith = require ("gulp.spritesmith");
 /*var uglify = require("gulp-uglify");
 var svgmin = require("gulp-svgmin");
 var path = require("path");
@@ -88,6 +89,15 @@ gulp.task("sprite", function () {
     }))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("dist/img"))
+});
+
+gulp.task("sprite-png", function(){
+  var spriteData = gulp.src("app/img/icon-*.png")
+  .pipe(spriteSmith({
+    imgName: "sprite-png.png",
+    cssName: "sprite-png.css"
+  }));
+  return spriteData.pipe(gulp.dest("dist/img/"));
 });
 
 
