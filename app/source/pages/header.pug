@@ -25,21 +25,28 @@ body
         img.user-box__img(src="http://place-hold.it/300x500", alt="")
         .user-box__name Мистер Мишкин
         .user-box__decs Web-developer
+      
       a.down-arrow
+
+    .triangle-box
+      svg(
+        class= "triangle"
+        viewbox="0 0 1000 100"
+        preserveAspectRatio="none"
+        )
+        polygon(class="triangle__left--fill-green" points="0,0 0,100 500,100")
+
+        polygon(class="triangle__right--fill-beige" points="1000,0 1000,100 500,100")
   
   main.main
 
     section.section.about
+
+
       
-      .about__info
-        
-        svg(
-          viewbox="0 0 1000 100"
-          preserveAspectRatio="none"
-          class="triangle triangle--fill-green triangle-about")
-          polygon(points="0,0 0,100 1000,100")
+      .about__info       
         .about__wrapper-left
-          h2.title.title--big.title--gray.title-about Обо мне
+          h2.title.title--big.title--gray.title-about.u-negative-margin-top Обо мне
           .about__img
             img(src="http://place-hold.it/445x390", alt="")
           h3.title.title--small.title--green Кто я
@@ -48,12 +55,6 @@ body
             p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
 
       .about__practice
-        
-        svg(
-          viewbox="0 0 1000 100"
-          preserveAspectRatio="none"
-          class="triangle triangle--fill-white triangle-about")
-          polygon(points="1000,0 1000,100 0,100")
         .about__wrapper-right
           h2.title.title--small.title--green.title-practice Чем я могу быть вам полезен
           .about__text.about__text--align-small.u-margin-bottom-md

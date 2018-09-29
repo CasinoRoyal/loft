@@ -151,7 +151,6 @@ img {
   background-position: 50% 35%;
   background-repeat: no-repeat; }
   .title--big {
-    margin-top: -10px;
     font-size: 63px; }
   .title--small {
     font-size: 35px; }
@@ -219,13 +218,21 @@ img {
   z-index: 100;
   cursor: pointer; }
 
+.triangle-box {
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+
 .triangle {
+  display: block;
   height: 100px;
   width: 100%; }
-  .triangle--fill-green {
-    fill: #ebefe2; }
-  .triangle--fill-white {
-    fill: #f4f5f0; }
+
+.triangle__left--fill-green {
+  fill: #ebefe2; }
+
+.triangle__right--fill-beige {
+  fill: #f4f5f0; }
 
 .contact {
   position: absolute;
@@ -485,10 +492,6 @@ img {
 
 .about__practice {
   background-color: #f4f5f0; }
-
-.triangle-about {
-  position: absolute;
-  bottom: 100%; }
 
 .about__wrapper-left {
   padding-left: 10px; }
