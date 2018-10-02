@@ -9,7 +9,19 @@
 </head>
 <body>
   <header class="section header">
-    <div class="wrapper"><a class="hamburger" href=""></a>
+    <div class="hamburger">
+      <input class="hamburger__checkbox" type="checkbox" id="hamburger__toggle"/>
+      <label class="hamburger__label" for="hamburger__toggle"><span class="hamburger__icon"></span></label>
+      <div class="hamburger__menu">
+        <ul class="hamburger__list">
+          <li class="hamburger__item"><a class="hamburger__link" href="">Мои работы</a></li>
+          <li class="hamburger__item"><a class="hamburger__link" href="">Блог</a></li>
+          <li class="hamburger__item"><a class="hamburger__link" href="">Обо мне</a></li>
+          <li class="hamburger__item"><a class="hamburger__link" href="">Авторизация</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrapper">
       <div class="user-box header__user-box"><img class="user-box__img" src="http://place-hold.it/300x500" alt=""/>
         <h2 class="title title--big">Блог</h2>
         <div class="user-box__decs">Статьи</div>

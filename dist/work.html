@@ -9,6 +9,18 @@
 </head>
 <body>
   <header class="section header">
+    <div class="hamburger">
+      <input class="hamburger__checkbox" type="checkbox" id="hamburger__toggle"/>
+      <label class="hamburger__label" for="hamburger__toggle"><span class="hamburger__icon"></span></label>
+      <div class="hamburger__menu">
+        <ul class="hamburger__list">
+          <li class="hamburger__item"><a class="hamburger__link" href="">Мои работы</a></li>
+          <li class="hamburger__item"><a class="hamburger__link" href="">Блог</a></li>
+          <li class="hamburger__item"><a class="hamburger__link" href="">Обо мне</a></li>
+          <li class="hamburger__item"><a class="hamburger__link" href="">Авторизация</a></li>
+        </ul>
+      </div>
+    </div>
     <div class="wrapper">
       <ul class="social">
         <li class="social__item social__item--fill-green"><a class="social__link social__link--vk" href="">
@@ -23,7 +35,7 @@
             <svg class="social__icon">
               <use xlink:href="img/sprite.svg#icon-in"></use>
             </svg></a></li>
-      </ul><a class="hamburger" href=""></a>
+      </ul>
       <div class="title-bg"><img class="title-bg__img" src="img/title-bg.png" alt=""/></div>
       <div class="user-box header__user-box"><img class="user-box__img" src="http://place-hold.it/300x500" alt=""/>
         <div class="user-box__name">Мистер Мишкин</div>
