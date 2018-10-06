@@ -17,6 +17,7 @@ var del = require("del");
 var pug = require("gulp-pug");
 var cheerio = require("gulp-cheerio");
 var spriteSmith = require ("gulp.spritesmith");
+var cssUnit = require ("gulp-css-unit");
 /*var uglify = require("gulp-uglify");
 var svgmin = require("gulp-svgmin");
 var path = require("path");
@@ -29,6 +30,10 @@ gulp.task("style", function(){
 		.pipe(postcss([
 			autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })
 		]))
+    .pipe(cssUnit({
+      type: 'px-to-rem',
+      rootSize: 16
+    }))
 		.pipe(gulp.dest('dist/css'))
     .pipe(reload({stream : true}))
 		.pipe(minify({

@@ -1,39 +1,40 @@
 <!DOCTYPE html>
-<html lang="ru"></html>
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  <link href="css/style.css" rel="stylesheet"/>
-  <title>Welcome</title>
-</head>
-<body>
-  <header class="header"><a class="btn-round">Авторизоваться</a>
-    <div class="welcome-box">
-      <div class="user-box"><img class="user-box__img" src="http://place-hold.it/300x500" alt=""/>
-        <div class="user-box__name">Мистер Мишкин</div>
-        <div class="user-box__decs user-box__decs--opacity">Web-developer</div>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <title>Welcome</title>
+  </head>
+  <body>
+    <section class="hero"><a class="btn-round hero__btn">Авторизоваться</a>
+      <div class="welcome-box">
+        <div class="user-box"><img class="user-box__img" src="http://place-hold.it/300x500" alt=""/>
+          <div class="user-box__name">Мистер Мишкин</div>
+          <div class="user-box__decs user-box__decs--opacity">Web-developer</div>
+        </div>
+        <div class="welcome__social-box">
+          <ul class="social social--center">
+            <li class="social__item social__item--fill-green social__item--opacity"><a class="social__link social__link--vk" href="">
+                <svg class="social__icon">
+                  <use xlink:href="img/sprite.svg#icon-vk"></use>
+                </svg></a></li>
+            <li class="social__item social__item--fill-green social__item--opacity"><a class="social__link social__link--gh" href="">
+                <svg class="social__icon">
+                  <use xlink:href="img/sprite.svg#icon-gh"></use>
+                </svg></a></li>
+            <li class="social__item social__item--fill-green social__item--opacity"><a class="social__link social__link--in" href="">
+                <svg class="social__icon">
+                  <use xlink:href="img/sprite.svg#icon-in"></use>
+                </svg></a></li>
+          </ul>
+        </div>
+        <div class="btn-box"><a class="btn" href="">Мои работы</a><a class="btn" href="">Обо мне</a><a class="btn" href="">Блог</a></div>
       </div>
-      <div class="welcome__social-box">
-        <ul class="social social--center">
-          <li class="social__item social__item--fill-green social__item--opacity"><a class="social__link social__link--vk" href="">
-              <svg class="social__icon">
-                <use xlink:href="img/sprite.svg#icon-vk"></use>
-              </svg></a></li>
-          <li class="social__item social__item--fill-green social__item--opacity"><a class="social__link social__link--gh" href="">
-              <svg class="social__icon">
-                <use xlink:href="img/sprite.svg#icon-gh"></use>
-              </svg></a></li>
-          <li class="social__item social__item--fill-green social__item--opacity"><a class="social__link social__link--in" href="">
-              <svg class="social__icon">
-                <use xlink:href="img/sprite.svg#icon-in"></use>
-              </svg></a></li>
-        </ul>
+      <div class="copyright copyright--white">
+        <p>© Владимир Астахов | Создано с любовью в LoftSchool | 2016</p>
       </div>
-      <div class="btn-box"><a class="btn" href="">Мои работы</a><a class="btn" href="">Обо мне</a><a class="btn" href="">Блог</a></div>
-    </div>
-    <footer class="copyright copyright-login">
-      <p>© Владимир Астахов | Создано с любовью в LoftSchool | 2016</p>
-    </footer>
-  </header>
-</body>
+    </section>
+  </body>
+</html>

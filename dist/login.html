@@ -1,52 +1,53 @@
 <!DOCTYPE html>
-<html lang="ru"></html>
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  <link href="css/style.css" rel="stylesheet"/>
-  <title>Login</title>
-</head>
-<body>
-  <header class="header">
-    <div class="welcome-box">
-      <h2 class="title title--small title--white u-margin-bottom-s">Авторизуйтесь</h2>
-      <form class="form">
-        <div class="form__group">
-          <input class="form__input form__input--padding-big" id="login" type="text" placeholder="Логин" required=""/>
-          <label class="form__input-label" for="login">
-            <svg class="form__input-icon">
-              <use xlink:href="img/sprite.svg#icon-login"></use>
-            </svg>
-          </label>
-        </div>
-        <div class="form__group">
-          <input class="form__input form__input--padding-big" id="pass" type="password" placeholder="Пароль" required=""/>
-          <label class="form__input-label" for="pass">
-            <svg class="form__input-icon">
-              <use xlink:href="img/sprite.svg#icon-password"></use>
-            </svg>
-          </label>
-        </div>
-        <div class="form__group">
-          <input class="form__checkbox" id="human" type="checkbox"/>
-          <label class="form__checkbox-label" for="human">Я человек</label>
-        </div>
-        <div class="form__group u-margin-bottom-md">
-          <p class="form__radio-text">Вы точно не робот?</p>
-          <input class="form__radio" id="positive" type="radio" name="captha"/>
-          <label class="form__radio-label" for="positive">Да</label>
-          <input class="form__radio" id="negative" type="radio" name="captha"/>
-          <label class="form__radio-label" for="negative">Не уверен</label>
-        </div>
-        <div class="btn-box">
-          <button class="btn" type="submit">На главную</button>
-          <button class="btn" type="submit">Войти</button>
-        </div>
-      </form>
-    </div>
-    <footer class="copyright copyright-login">
-      <p>© Владимир Астахов | Создано с любовью в LoftSchool | 2016</p>
-    </footer>
-  </header>
-</body>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <title>Login</title>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="welcome-box">
+        <h2 class="title title--small title--white u-margin-bottom-s">Авторизуйтесь</h2>
+        <form class="form">
+          <div class="form__group">
+            <input class="form__input form__input--padding-big" id="login" type="text" placeholder="Логин" required=""/>
+            <label class="form__input-label" for="login">
+              <svg class="form__input-icon">
+                <use xlink:href="img/sprite.svg#icon-login"></use>
+              </svg>
+            </label>
+          </div>
+          <div class="form__group">
+            <input class="form__input form__input--padding-big" id="pass" type="password" placeholder="Пароль" required=""/>
+            <label class="form__input-label" for="pass">
+              <svg class="form__input-icon">
+                <use xlink:href="img/sprite.svg#icon-password"></use>
+              </svg>
+            </label>
+          </div>
+          <div class="form__group">
+            <input class="form__checkbox" id="human" type="checkbox"/>
+            <label class="form__checkbox-label" for="human">Я человек</label>
+          </div>
+          <div class="form__group u-margin-bottom-md">
+            <p class="form__radio-text">Вы точно не робот?</p>
+            <input class="form__radio" id="positive" type="radio" name="captha"/>
+            <label class="form__radio-label" for="positive">Да</label>
+            <input class="form__radio" id="negative" type="radio" name="captha"/>
+            <label class="form__radio-label" for="negative">Не уверен</label>
+          </div>
+          <div class="btn-box">
+            <button class="btn" type="submit">На главную</button>
+            <button class="btn" type="submit">Войти</button>
+          </div>
+        </form>
+      </div>
+      <div class="copyright copyright--white">
+        <p>© Владимир Астахов | Создано с любовью в LoftSchool | 2016</p>
+      </div>
+    </section>
+  </body>
+</html>
